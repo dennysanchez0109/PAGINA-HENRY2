@@ -1,0 +1,213 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* FUENTES */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color:#F9F9F9;
+  color: #222;
+  line-height: 1,6;
+}
+/*NAVBAR*/
+.navbar {
+  background-color: #fff;
+  border-bottom: 1xp solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+.logo img {
+  height: 50px;
+}
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+
+}
+.menu a:hover {
+  color: #d00000;
+}
+.social-icons a {
+    margin-left: 10px;
+    color: #555;
+    font-size: 20px;
+}
+.social-icons a:hover {
+    color: #d00000;
+}
+/* HERO */
+.hero {
+    background: #d00000;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    }
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.1rem;
+    
+}
+/* SECCIÓN DE NOTICIAS */
+.destacadas {
+    padding: 40px 20px;
+   
+}
+
+.destacadas h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+ .noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+.noticia {
+   background-color: #fff;
+   border: 1px solid #eee;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 2px 6px rgba(0, 0, 0,0.05);
+   transition: transform 0.3s ease;
+}
+.noticia:hover {
+    transform: translateY(-5px);
+}
+.noticia img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.noticia h3 {
+   padding: 15px;
+   font-size: 1.1rem;
+}
+.noticia p {
+    padding: 0 15px 10px;
+    color: #555;
+}
+.noticia a {
+    display: block;
+    padding: 10px 15px;
+    padding: 10px 0;
+    background-color: #d00000;
+    color: #fff;
+    text-align:center;
+    text-decoration: none;
+}
+.noticia a:hover {
+    background-color: #a00000;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+.footer .social-icons a {
+   margin:0 10px ;
+    color: #fff;
+}
+.footer .social-icons a:hover {
+    color: #d00000;
+}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu {
+    margin-top: 10px;
+    }
+    .menu a {
+        display: block;
+        margin: 5px 0;
+    }
+    }
+
+    /* Diseño responsive básico para móvil */
+@media (max-width: 768px) {
+  header, .navbar, footer {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .news-container {
+    grid-template-columns: 1fr !important;
+    padding: 10px;
+  }
+
+  .news-card img {
+    height: 200px;
+  }
+}
+
+/* Animación hover para las tarjetas de noticias */
+.news-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Transición suave para enlaces en el menú */
+.nav-links a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffc300;
+  transform: scale(1.1);
+}
+
+/* Botones con animación */
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a00000;
+  transform: scale(1.05);
+}
+
+/* Aparición suave de elementos al cargar */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+
+ 
